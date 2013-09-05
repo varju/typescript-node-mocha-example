@@ -1,13 +1,19 @@
 /// <reference path='../../app.d.ts' />
 
-import restify = require('restify');
-import rootController = require('controllers/root');
+import express = require('express');
+import routes = require('./routes/index');
 
-export function createServer():Server {
-  var server = restify.createServer();
-  server.use(restify.bodyParser());
+export var app = express();
 
-  server.get('/', rootController.helloWorld);
+// all environments
+app.set('port', process.env.PORT || 9650);
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
 
-  return server;
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
 }
+
+app.get('/', routes.index);

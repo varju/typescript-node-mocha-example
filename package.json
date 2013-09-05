@@ -1,15 +1,16 @@
 {
-  "name": "tungsten",
-  "description": "Tungsten",
+  "name": "typescript-node-mocha-example",
+  "description": "TypeScript example project using Node, Express and Mocha",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "restify": "~2.6.0"
+    "express": "~3.3.8"
   },
   "devDependencies": {
     "grunt-typescript": "~0.2.4",
     "grunt-curl": "~1.1.1",
     "grunt-nodemon": "~0.1.0",
-    "grunt-mocha-test": "~0.6.3"
+    "grunt-mocha-test": "~0.6.3",
+    "supertest": "~0.7.1"
   }
 }

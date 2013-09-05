@@ -1,8 +1,10 @@
 /// <reference path='../../app.d.ts' />
 
-import server = require('server');
+import http = require('http');
+import server = require('./server');
 
-var s = server.createServer();
-s.listen(9650, function () {
-  console.log('%s listening at %s', s.name, s.url);
+var app = server.app;
+
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
 });
