@@ -4,23 +4,13 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     typescript: {
-      app: {
-        src: ['src/app/**/*.ts'],
-        dest: 'build/app',
+      src: {
+        src: ['src/**/*.ts'],
+        dest: 'src',
         options: {
           module: 'commonjs',
-          base_path: 'src/app',
+          base_path: 'src',
           sourcemap: true
-        }
-      },
-
-      test: {
-        src: ['src/test/**/*.ts'],
-        dest: 'build/test',
-        options: {
-          module: 'commonjs',
-          base_path: 'src/test',
-          sourcemap: false
         }
       }
     },
@@ -31,7 +21,7 @@ module.exports = function(grunt) {
           reporter: 'spec',
           quiet: false
         },
-        src: ['build/test/**/*.js']
+        src: ['src/test/**/*.js']
       }
     },
 
@@ -45,9 +35,9 @@ module.exports = function(grunt) {
     nodemon: {
       dev: {
         options: {
-          file: 'build/app/main.js',
+          file: 'src/app/main.js',
           // monitor the build dir so that external builders (e.g. WebStorm) trigger restart
-          watchedFolders: ['build']
+          watchedFolders: ['src']
         }
       }
     }
@@ -58,8 +48,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-nodemon');
 
-  grunt.registerTask('compile', 'Compile our production code', ['typescript:app']);
-  grunt.registerTask('test', 'Compile and execute the unit tests', ['typescript:test', 'mochaTest']);
+  grunt.registerTask('compile', 'Compile our production and test code', ['typescript']);
+  grunt.registerTask('test', 'Execute the unit tests', ['mochaTest']);
   grunt.registerTask('start', 'Start the webserver', ['nodemon']);
 
   grunt.registerTask('default', ['compile', 'test', 'start']);
