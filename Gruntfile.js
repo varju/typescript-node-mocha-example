@@ -25,6 +25,13 @@ module.exports = function(grunt) {
       }
     },
 
+    watch: {
+      test: {
+        files: ['src/**/*.ts'],
+        tasks: ['compile', 'test']
+      }
+    },
+
     // execute 'grunt curl' manually to refresh the external definition files
     curl: {
       'ts-definitions/express/express.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/express/express.d.ts',
@@ -49,10 +56,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-typescript');
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-nodemon');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('compile', 'Compile our production and test code', ['typescript']);
   grunt.registerTask('test', 'Execute the unit tests', ['mochaTest']);
   grunt.registerTask('start', 'Start the webserver', ['nodemon']);
+
+  grunt.registerTask('testLoop', 'Reruns the tests every time the .ts files are updated', ['watch:test']);
 
   grunt.registerTask('default', ['compile', 'test', 'start']);
 

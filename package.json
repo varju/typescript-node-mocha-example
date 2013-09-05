@@ -11,6 +11,7 @@
     "grunt-curl": "~1.1.1",
     "grunt-nodemon": "~0.1.0",
     "grunt-mocha-test": "~0.6.3",
+    "grunt-contrib-watch": "~0.5.3",
     "supertest": "~0.7.1"
   }
 }
