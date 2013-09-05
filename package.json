@@ -1,0 +1,17 @@
+{
+  "name": "tungsten",
+  "description": "Tungsten",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "restify": "~2.6.0"
+  },
+  "devDependencies": {
+    "grunt-typescript": "~0.2.4",
+    "grunt-curl": "~1.1.1",
+    "grunt-nodemon": "~0.1.0",
+    "jasmine-node": "~1.11.0",
+    "grunt-jasmine-node": "~0.1.0",
+    "grunt-mocha-test": "~0.6.3"
+  }
+}
