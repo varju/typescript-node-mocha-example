@@ -1,4 +1,4 @@
-/// <reference path='../../ts-definitions/restify.d.ts' />
+/// <reference path='../../app.d.ts' />
 
 import restify = require('restify');
 import rootController = require('controllers/root');

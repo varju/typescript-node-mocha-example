@@ -37,9 +37,9 @@ module.exports = function(grunt) {
 
     // execute 'grunt curl' manually to refresh the external definition files
     curl: {
-      'ts-definitions/restify.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/restify/restify.d.ts',
-      'ts-definitions/mocha.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/mocha/mocha.d.ts',
-      'ts-definitions/node.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/node/node.d.ts'
+      'ts-definitions/restify/restify.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/restify/restify.d.ts',
+      'ts-definitions/mocha/mocha.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/mocha/mocha.d.ts',
+      'ts-definitions/node/node.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/node/node.d.ts'
     },
 
     nodemon: {

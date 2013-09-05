@@ -1,5 +1,4 @@
-/// <reference path='../../../ts-definitions/node.d.ts' />
-/// <reference path='../../../ts-definitions/mocha.d.ts' />
+/// <reference path='../../../app.d.ts' />
 
 import assert = require('assert');
 import fs = require('fs');
