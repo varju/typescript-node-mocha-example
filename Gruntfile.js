@@ -36,6 +36,7 @@ module.exports = function(grunt) {
     curl: {
       'ts-definitions/express/express.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/express/express.d.ts',
       'ts-definitions/mocha/mocha.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/mocha/mocha.d.ts',
+      'ts-definitions/mongodb/mongodb.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/mongodb/mongodb.d.ts',
       'ts-definitions/node/node.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/node/node.d.ts',
       'ts-definitions/superagent/superagent.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/superagent/superagent.d.ts',
       'ts-definitions/supertest/supertest.d.ts': 'https://github.com/borisyankov/DefinitelyTyped/raw/master/supertest/supertest.d.ts'

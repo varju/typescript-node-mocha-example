@@ -1,5 +1,10 @@
 {
   "server": {
     "port": 9650
+  },
+  "mongo": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "typescript-node-mocha-example"
   }
 }
