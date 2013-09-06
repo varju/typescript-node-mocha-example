@@ -1,6 +1,5 @@
 /// <reference path='../../../app.d.ts' />
 
-import assert = require('assert');
 import request = require('supertest');
 import server = require('../../app/server')
 

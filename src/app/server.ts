@@ -2,7 +2,8 @@
 
 import express = require('express');
 
-import routes = require('./routes/index');
+import routeIndex = require('./routes/index');
+import userRoutes = require('./routes/user_routes');
 import config = require('./config');
 
 export var app = express();
@@ -18,4 +19,6 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/', routeIndex.index);
+app.post('/users', userRoutes.create);
+app.get('/users/:id', userRoutes.get);
