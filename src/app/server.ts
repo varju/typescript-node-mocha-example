@@ -1,12 +1,14 @@
 /// <reference path='../../app.d.ts' />
 
 import express = require('express');
+
 import routes = require('./routes/index');
+import config = require('./config');
 
 export var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 9650);
+app.set('port', config.props.server.port);
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);

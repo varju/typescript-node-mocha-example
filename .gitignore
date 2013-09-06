@@ -3,3 +3,4 @@ src/**/*.js
 src/**/*.js.map
 .idea
 npm-debug.log
+config_overrides.json
