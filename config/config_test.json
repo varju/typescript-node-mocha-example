@@ -1,0 +1,5 @@
+{
+  "mongo": {
+    "uri": "mongodb://localhost/node-express-mongoose-example-test"
+  }
+}

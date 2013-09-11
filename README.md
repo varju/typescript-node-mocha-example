@@ -1,22 +1,20 @@
-# TypeScript Node Mocha Example
+# node-express-mongoose-example [![Build Status](https://secure.travis-ci.org/varju/node-express-mongoose-example.png?branch=master)](http://travis-ci.org/varju/node-express-mongoose-example)
 
-Simple project to explore the best way of laying out a TypeScript-based Node.js project.  Uses [express](http://expressjs.com/) to expose a REST API, [Mongo](http://mongodb.github.io/node-mongodb-native/) for persistence, and [Mocha](http://visionmedia.github.io/mocha) to test the API.
+Simple project to explore building a fully testable Node application.
 
 ## Demo endpoints
 
+List the available routes:
 ```
 curl http://localhost:9650/
 ```
 
+Create a user:
 ```
 curl -X POST http://localhost:9650/users -H "Content-Type: application/json" -d '{ "name": "my user" }'
 ```
 
+Find a user:
 ```
-curl http://localhost:9650/users/522a658e29eae2b52a000001
+curl http://localhost:9650/users/522e6095ae775c30b6000002
 ```
-
-# TODO
-
-- Fix Mongo so it's only opening database connection once for the life of the application
-- Replace raw Mongo with Mongoose

@@ -1,6 +1,7 @@
-node_modules
-src/**/*.js
-src/**/*.js.map
+/node_modules/
 .idea
-npm-debug.log
-config_overrides.json
+/build/
+/app/**/*.js
+/app/**/*.js.map
+/test/**/*.js
+/test/**/*.js.map
