@@ -61,7 +61,7 @@ module.exports = function (grunt) {
     watch: {
       app: {
         files: ['app/**/*.ts'],
-        tasks: ['typescript:app', '_runTests']
+        tasks: ['typescript', '_runTests']
       },
       config: {
         files: ['config/**/*.js', 'config/**/*.json'],
