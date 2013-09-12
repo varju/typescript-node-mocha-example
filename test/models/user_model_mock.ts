@@ -1,9 +1,7 @@
 /// <reference path='../test.d.ts' />
 
 import mongooseMock = require('./mongoose_mock');
-import userModel = require('../../app/models/user_model');
-
-var User = userModel.User;
+import User = require('../../app/models/user_model');
 
 export class UserMock extends mongooseMock.MongooseMock {
   constructor() {

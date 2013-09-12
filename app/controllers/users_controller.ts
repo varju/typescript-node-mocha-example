@@ -2,9 +2,7 @@
 
 var asyncblock = require('asyncblock');
 
-import userModel = require('../../app/models/user_model');
-
-var User = userModel.User;
+import User = require('../../app/models/user_model');
 
 module.exports = (app:ExpressApplication) => {
 

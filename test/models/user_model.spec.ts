@@ -2,9 +2,7 @@
 
 import should = require('should');
 
-import userModel = require('../../app/models/user_model');
-
-var User = userModel.User;
+import User = require('../../app/models/user_model');
 
 describe('user model', () => {
   beforeEach((done) => {
